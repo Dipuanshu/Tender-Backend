@@ -20,6 +20,10 @@ const applicationModel = require("./TenderDb/applicationModel");
 
 const upload = multer({ dest: "uploads/" });
 
+app.get("/", (req, res) => {
+  res.send("🚀 Backend API is running!");
+});
+
 app.post("/login", async (req, res) => {
   if (req.body.email && req.body.password) {
     let users = await userModel.findOne(req.body).select("-password");
