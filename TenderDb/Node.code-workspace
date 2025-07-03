@@ -1,0 +1,13 @@
+{
+  "folders": [
+	{
+		"name": "Node",
+		"path": ".."
+	},
+	{
+		"name": "Tender-Management",
+		"path": "../../Tender/Tender-Management"
+	}
+],
+  "settings": {}
+}
