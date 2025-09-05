@@ -6,4 +6,4 @@ const Tenderschema = new mongoose.Schema({
   email: String,
   password: String,
 });
-module.exports = mongoose.model("singUp", Tenderschema);
+module.exports = mongoose.model("singups", Tenderschema);
