@@ -21,7 +21,7 @@ const applicationModel = require("./TenderDb/applicationModel");
 const upload = multer({ dest: "uploads/" });
 
 app.get("/", (req, res) => {
-  res.send("🚀 Backend API is running!");
+  res.send("Backend API is running!");
 });
 
 app.post("/login", async (req, res) => {
