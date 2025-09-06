@@ -182,7 +182,7 @@ app.get("/tenders", VerifyToken, async (req, res) => {
   try {
     const tenders = await tenderModel
       .find({
-        $or: [{ isPublic: true }, { userId: { $ne: req.user.id } }],
+        $or: [{ isPublic: true }, { userId: req.user.id }],
       })
       .sort({ createdAt: -1 });
     res.json(tenders);
@@ -248,6 +248,7 @@ app.get("/companies", async (req, res) => {
   const { search } = req.query;
 
   let query = { isPublic: true }; // ✅ Sirf public
+  console.log(query);
 
   if (search) {
     query.$or = [
